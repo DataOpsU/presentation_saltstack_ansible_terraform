@@ -9,7 +9,7 @@ data "aws_ami" "ubuntu" {
   most_recent = true
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200611"]
   }
   filter {
     name   = "virtualization-type"
@@ -21,7 +21,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "name-minion" {
   ami             = "${data.aws_ami.ubuntu.id}"
   instance_type   = "t2.micro"
-  security_groups = "salted_server"
+  security_groups = ["salted_server"]
   tags {
     Name = "name-minion"
   }
