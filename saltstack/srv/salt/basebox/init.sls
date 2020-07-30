@@ -10,3 +10,7 @@ setup_basebox:
       - wget
       - curl
       - nano
+
+/tmp/demo_server/images:
+  file.managed:
+    - source: salt://www/images/firefox-icon.png
