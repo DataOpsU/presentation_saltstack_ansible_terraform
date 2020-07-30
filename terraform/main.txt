@@ -22,6 +22,7 @@ resource "aws_instance" "name-minion" {
   ami             = "${data.aws_ami.ubuntu.id}"
   instance_type   = "t2.micro"
   security_groups = ["salted_server"]
+  key_name = "mike_lab"
   tags {
     Name = "name-minion"
   }
