@@ -2,7 +2,7 @@
 # This playbook uses the ping module to test connectivity to Linux hosts
 - name: Ping
   hosts: 192.168.33.10
-  remote_user: vagrant
+  remote_user: ubuntu
 
   tasks:
   - name: ping
