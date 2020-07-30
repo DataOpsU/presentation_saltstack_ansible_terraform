@@ -10,3 +10,7 @@
       path: /tmp/demo_server
       state: directory
       recurse: yes
+  - name: Copy index.html
+    copy:
+      src: index.html
+      dest: /tmp/demo_server/index.html
