@@ -20,3 +20,9 @@ setup_basebox:
   file.managed:
     - source: salt://www/styles/style.css
     - makedirs: True
+
+run_server:
+  cmd.run:
+    - name: nohup python3 -m http.server 8080 &
+    - cwd: /tmp/demo_server
+    - bg: True
